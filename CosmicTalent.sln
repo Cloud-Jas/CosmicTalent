@@ -1,0 +1,60 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34310.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.AppHost", "CosmicTalent.AppHost\CosmicTalent.AppHost.csproj", "{F5DDA4E8-10FA-496F-9E63-07F1DF0DC5CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.ChatApp", "CosmicTalent.ChatApp\CosmicTalent.ChatApp.csproj", "{A31DED5F-E5A4-4DC9-BF03-C4ED73A87846}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.DocumentProcessor", "CosmicTalent.DocumentProcessor\CosmicTalent.DocumentProcessor.csproj", "{08577741-564E-4DE9-8C78-A9F81B8933F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.WorkerService", "CosmicTalent.WorkerService\CosmicTalent.WorkerService.csproj", "{16FF8C91-FF95-4A5F-B6F0-C3B0B3010D4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.TalentProcessor", "CosmicTalent.TalentProcessor\CosmicTalent.TalentProcessor.csproj", "{7CD47D78-5BEA-4EF8-A29A-AEEE0A2F648B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmicTalent.ServiceDefaults", "CosmicTalent.ServiceDefaults\CosmicTalent.ServiceDefaults.csproj", "{210D840A-76EF-4ED6-9102-DF8F1942FAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicTalent.Shared", "CosmicTalent.Shared\CosmicTalent.Shared.csproj", "{25AC0A9D-6F01-4307-AAA8-DDC78E79E1DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5DDA4E8-10FA-496F-9E63-07F1DF0DC5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DDA4E8-10FA-496F-9E63-07F1DF0DC5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DDA4E8-10FA-496F-9E63-07F1DF0DC5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DDA4E8-10FA-496F-9E63-07F1DF0DC5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31DED5F-E5A4-4DC9-BF03-C4ED73A87846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31DED5F-E5A4-4DC9-BF03-C4ED73A87846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31DED5F-E5A4-4DC9-BF03-C4ED73A87846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31DED5F-E5A4-4DC9-BF03-C4ED73A87846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08577741-564E-4DE9-8C78-A9F81B8933F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08577741-564E-4DE9-8C78-A9F81B8933F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08577741-564E-4DE9-8C78-A9F81B8933F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08577741-564E-4DE9-8C78-A9F81B8933F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FF8C91-FF95-4A5F-B6F0-C3B0B3010D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FF8C91-FF95-4A5F-B6F0-C3B0B3010D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FF8C91-FF95-4A5F-B6F0-C3B0B3010D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FF8C91-FF95-4A5F-B6F0-C3B0B3010D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD47D78-5BEA-4EF8-A29A-AEEE0A2F648B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD47D78-5BEA-4EF8-A29A-AEEE0A2F648B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD47D78-5BEA-4EF8-A29A-AEEE0A2F648B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD47D78-5BEA-4EF8-A29A-AEEE0A2F648B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210D840A-76EF-4ED6-9102-DF8F1942FAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210D840A-76EF-4ED6-9102-DF8F1942FAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210D840A-76EF-4ED6-9102-DF8F1942FAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210D840A-76EF-4ED6-9102-DF8F1942FAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25AC0A9D-6F01-4307-AAA8-DDC78E79E1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25AC0A9D-6F01-4307-AAA8-DDC78E79E1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25AC0A9D-6F01-4307-AAA8-DDC78E79E1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25AC0A9D-6F01-4307-AAA8-DDC78E79E1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C307FC7-8772-4320-9916-6F8F52DF2641}
+	EndGlobalSection
+EndGlobal

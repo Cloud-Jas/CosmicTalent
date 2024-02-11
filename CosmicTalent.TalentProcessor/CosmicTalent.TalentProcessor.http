@@ -1,0 +1,6 @@
+@CosmicTalent.TalentProcessor_HostAddress = http://localhost:5236
+
+GET {{CosmicTalent.TalentProcessor_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

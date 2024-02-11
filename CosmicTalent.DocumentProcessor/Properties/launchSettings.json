@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "CosmicTalent.DocumentProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7038"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 34028,
+      "useSSL": false
+    }
+  }
+}

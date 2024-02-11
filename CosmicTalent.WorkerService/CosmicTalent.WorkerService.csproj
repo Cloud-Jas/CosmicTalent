@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>dotnet-CosmicTalent.WorkerService-c83162d0-21eb-42ee-b0c8-b9626ad66d80</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Aspire.Azure.Messaging.ServiceBus" Version="8.0.0-preview.1.23557.2" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CosmicTalent.ServiceDefaults\CosmicTalent.ServiceDefaults.csproj" />
+		<ProjectReference Include="..\CosmicTalent.Shared\CosmicTalent.Shared.csproj" />
+	</ItemGroup>
+</Project>
