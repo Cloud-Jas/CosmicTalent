@@ -16,13 +16,12 @@ namespace CosmicTalent.TalentProcessor.Controllers
             _openAIservice = openAIService;
         }
 
-        [HttpGet("embeddings/{userPrompt}/sessions/{sessionId}")]
-        public async Task<ActionResult<EmbeddingResponse>> GetEmbeddingAsync(string userPrompt, string sessionId)
+        [HttpPost("embeddings/sessions/{sessionId}")]
+        public async Task<ActionResult<EmbeddingResponse>> GetEmbeddingAsync(UserPromptRequest userPrompt, string sessionId)
         {
             try
-            {
-                string decodedUserPrompt = WebUtility.UrlDecode(userPrompt);
-                var (embeddings, tokens) = await _openAIservice.GetEmbeddingsAsync(decodedUserPrompt, sessionId);
+            {                
+                var (embeddings, tokens) = await _openAIservice.GetEmbeddingsAsync(userPrompt.Prompt, sessionId);
                 return Ok(new EmbeddingResponse
                 {
                     PromptTokens = tokens,

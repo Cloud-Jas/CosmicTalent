@@ -92,9 +92,9 @@ public class ChatApiClient
     {
         try            
         {
-            ArgumentNullException.ThrowIfNull(sessionId);
-            string encodedUserPrompt = WebUtility.UrlEncode(userPrompt);
-            EmbeddingResponse embeddingResponse = await _openAIClient.GetFromJsonAsync<EmbeddingResponse>($"embeddings/{encodedUserPrompt}/sessions/{sessionId}");
+            ArgumentNullException.ThrowIfNull(sessionId);                        
+            var response = await _openAIClient.PostAsJsonAsync<UserPromptRequest>($"embeddings/sessions/{sessionId}", new UserPromptRequest { Prompt = userPrompt});
+            EmbeddingResponse embeddingResponse = await response.Content.ReadFromJsonAsync<EmbeddingResponse>();
             if (embeddingResponse != null)
             {
                 Message promptMessage = new Message(sessionId, nameof(Participants.User), embeddingResponse.PromptTokens, default, userPrompt);
@@ -102,12 +102,12 @@ public class ChatApiClient
                 string conversation = GetConversationHistory(sessionId);
                 (string augmentedContent, string conversationAndUserPrompt) = BuildPrompts(userPrompt, conversation, retrievedDocuments);
                 var responseBody = await (await _openAIClient.PostAsJsonAsync($"chatCompletions", new CompletionRequest { SessionId = sessionId, Conversation = conversationAndUserPrompt, AugmentedContent = augmentedContent })).Content.ReadAsStringAsync();
-                var response = JsonConvert.DeserializeObject<CompletionResponse>(responseBody);
-                if (response != null)
+                var CompletionResponse = JsonConvert.DeserializeObject<CompletionResponse>(responseBody);
+                if (CompletionResponse != null)
                 {
-                    Message completionMessage = new Message(sessionId, nameof(Participants.Assistant), response.CompletionTokens, response.RagTokens, response.CompletionText);
+                    Message completionMessage = new Message(sessionId, nameof(Participants.Assistant), CompletionResponse.CompletionTokens, CompletionResponse.RagTokens, CompletionResponse.CompletionText);
                     await AddPromptCompletionMessagesAsync(sessionId, promptMessage, completionMessage);
-                    return response.CompletionText;
+                    return CompletionResponse.CompletionText;
                 }
                 else
                 {
